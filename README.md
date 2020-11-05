@@ -1,3 +1,3 @@
 # Data-Structures
-Implemented in C Language.\n
+Implemented in C Language.
 1) Stack
