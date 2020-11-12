@@ -28,7 +28,7 @@ while(choice!=5):
         display()
     elif choice==4:
         peek(top)
-    elif choice==1:
+    elif choice==5:
         exit()
 
 
