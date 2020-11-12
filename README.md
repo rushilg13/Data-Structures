@@ -1,5 +1,5 @@
 # Data-Structures
-Implemented in C Language.
+Implemented in C Language And Python.
 1) Stack
 2) Queue
 3) Parenthesis Balancing
