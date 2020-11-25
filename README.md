@@ -5,3 +5,5 @@ Implemented in C Language And Python.
 3) Parenthesis Balancing
 4) Merge Stacks
 5) Circular Queue
+6) Linkedlist
+7) Circular LinkedList
