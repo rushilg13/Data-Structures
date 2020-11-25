@@ -8,3 +8,4 @@ Implemented in C Language And Python.
 6) Linkedlist
 7) Circular LinkedList
 8) Doubly LinkedList
+9) Binary Trees
