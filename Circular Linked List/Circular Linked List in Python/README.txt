@@ -6,6 +6,5 @@ Operations Implemented So far ->
 5. Delete Start
 6. Delete Mid
 7. Delete End
-8. Delete End
-9. Size
-10. Exit
+8. Size
+9. Exit
