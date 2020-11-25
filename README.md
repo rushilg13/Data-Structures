@@ -7,3 +7,4 @@ Implemented in C Language And Python.
 5) Circular Queue
 6) Linkedlist
 7) Circular LinkedList
+8) Doubly LinkedList
