@@ -33,20 +33,30 @@ class Tree:
         queue.enqueue(start)
         while queue.size()>0:
             node = queue.dequeue()
-            if(node.left):
+            if(node.left and node.right):
                 if(node.left.value < node.value and node.right.value > node.value):
                     queue.enqueue(node.left)
                     flag=1
                 else:
                     flag=0
                     break
-            if(node.right):
-                if(node.left.value < node.value and node.right.value > node.value):
+
+            if(node.right and node.left==None):
+                if(node.right.value > node.value):
                     queue.enqueue(node.right)
                     flag=1
                 else:
                     flag=0
                     break
+
+            if(node.right==None and node.left):
+                if(node.left.value < node.value):
+                    queue.enqueue(node.left)
+                    flag=1
+                else:
+                    flag=0
+                    break
+
         if(flag==1):
             print("Given Tree is a BST")
         else:
@@ -72,6 +82,7 @@ class Tree:
 
 
     # APPROACH FOR SEARCHING BST (WORKS BUT HIGHER TIME COMPLEXITY)
+    
     # def search(self, start, key):
     #     if start == None:
     #         return
@@ -97,15 +108,62 @@ class Tree:
             if start.left == None:
                 start.left = Node(value)
             else:
-                bin_tree.insert(start.left, value)
+                self.insert(start.left, value)
         
         if start.value < value:
             if start.right == None:
                 start.right = Node(value)
             else:
-                bin_tree.insert(start.right, value)
+                self.insert(start.right, value)
         return value
+    
+    def delete(self, start, value):
+        if start == None:
+            return
+        print(start.value)
+        if start.left.value == value:
+            if start.left.left == None and start.left.right == None:   # leaf Node  ie  0 child
+                start.left = None
+                return
 
+            elif (start.left.left != None and start.left.right == None):   # leaf Node  but  1 child
+                start.left = start.left.left
+                return
+            elif (start.left.left == None and start.left.right != None):   # leaf Node  but  1 child
+                start.left = start.left.right
+                return
+
+            elif (start.left.left != None and start.left.right != None):   #  Node  but  2 child
+                node = start.left
+                while(node.right!=None):
+                    node = node.right
+                start.left = node
+                return
+           
+    
+        if start.right.value == value:
+            if start.right.left == None and start.right.right == None:   # leaf Node  ie  0 child
+                start.right = None
+                return
+            
+            elif (start.right.left != None and start.right.right == None):   # leaf Node  but  1 child
+                start.right = start.right.left
+                return
+            elif (start.right.left == None and start.right.right != None):   # leaf Node  but  1 child
+                start.right = start.right.right
+                return 
+            
+            elif (start.right.left != None and start.right.right != None):   #  Node  but  2 child
+                node = start.right
+                while(node.right!=None):
+                    node = node.right
+                start.right = node
+                return
+
+        if start.value > value:
+            self.delete(start.left, value)
+        if start.value < value:
+            self.delete(start.right, value)
 
 
 bin_tree = Tree(8)
@@ -113,26 +171,34 @@ bin_tree.root.left = Node(3)
 bin_tree.root.right = Node(10)
 bin_tree.root.left.left = Node(1)
 bin_tree.root.left.right = Node(6)
-bin_tree.root.right.left = Node(7)
+bin_tree.root.left.left.left = Node(0)
+bin_tree.root.left.left.right = Node(2)
+bin_tree.root.right.left = Node(9)
 bin_tree.root.right.right = Node(14)
+bin_tree.root.right.right.left = Node(13)
 bin_tree.check_bst(bin_tree.root)
-print(bin_tree.search(bin_tree.root, 60), "(key) Found in BST")
+print(bin_tree.search(bin_tree.root, 9), "(key) Found in BST")
 bin_tree.insert(bin_tree.root, 60)
 print(bin_tree.search(bin_tree.root, 60), "(key) Found in BST")
+bin_tree.delete(bin_tree.root, 14)
+print(bin_tree.search(bin_tree.root, 14), "(key) Found in BST")
+bin_tree.check_bst(bin_tree.root)
 
-''' OUTPUT OF ABOVE CODE ->
-Given Tree is a BST
-None (key) Found in BST
-60 (key) Found in BST
-'''
+# print(bin_tree.search(bin_tree.root, 1), "(key) Found in BST")
 
 
-'''
-                8
-             /     \
-            3       10
-          /   \    /   \
-        1      6   7    14
-                          \
-                           60            
-'''
+# OUTPUT OF ABOVE CODE ->
+# Given Tree is a BST
+# None (key) Found in BST
+# 60 (key) Found in BST
+
+
+# '''
+#                 8
+#              /     \
+#             3       10
+#           /   \    /   \
+#          1     6  9     14
+#        /  \           /   \
+#       0    2        13     60            
+# '''
