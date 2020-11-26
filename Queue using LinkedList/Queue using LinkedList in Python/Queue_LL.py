@@ -40,6 +40,13 @@ class Queue_LL:
                 temp = temp.next
             print(temp.data)
 
+    def is_empty(self):
+        if self.start == None:
+            print("Queue is Empty")
+            return
+        else:
+            print("Queue is Not Empty!")
+
 QLL = Queue_LL()
 QLL.enqueue(10)
 QLL.enqueue(20)
@@ -48,3 +55,4 @@ QLL.display()
 QLL.dequeue()
 QLL.display()
 QLL.peek()
+QLL.is_empty()
