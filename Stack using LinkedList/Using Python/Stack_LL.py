@@ -8,5 +8,17 @@ class Stack_LL:
         self.start = None
 
     def insert(self, value):
-        if start == None:
-            start.next = Node(value)        
+        if self.start == None:
+            self.start = Node(value)   
+        else:
+            temp = self.start
+            while(temp.next!=None):
+                temp = temp.next
+            temp.next = Node(value)
+    
+
+
+SLL = Stack_LL()
+SLL.insert(10)
+SLL.insert(20)
+SLL.insert(30)     
