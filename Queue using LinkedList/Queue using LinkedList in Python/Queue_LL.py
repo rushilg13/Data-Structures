@@ -29,7 +29,16 @@ class Queue_LL:
             temp = self.start
             while(temp.next.next != None):
                 temp = temp.next
-            temp.next = None        
+            temp.next = None   
+
+    def peek(self):
+        if self.start == None:
+            print("Queue is Empty")
+        else:
+            temp = self.start
+            while(temp.next!=None):
+                temp = temp.next
+            print(temp.data)
 
 QLL = Queue_LL()
 QLL.enqueue(10)
@@ -38,3 +47,4 @@ QLL.enqueue(30)
 QLL.display()
 QLL.dequeue()
 QLL.display()
+QLL.peek()
