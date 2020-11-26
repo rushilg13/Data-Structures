@@ -33,7 +33,16 @@ class Stack_LL:
             temp = self.start
             while(temp.next.next!=None):
                 temp = temp.next
-            temp.next = None     
+            temp.next = None   
+
+    def peek(self):
+        if self.start == None:
+            print("Stack is Empty!")
+        else:
+            temp = self.start
+            while(temp.next!=None):
+                temp = temp.next
+            print(temp.data)  
 
 
 SLL = Stack_LL()
@@ -44,3 +53,4 @@ SLL.push(40)
 SLL.display()
 SLL.pop()
 SLL.display()
+SLL.peek()
