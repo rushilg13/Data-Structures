@@ -8,8 +8,22 @@ class Queue_LL:
         self.start = None
     
     def enqueue(self, value):
-        newNode = Node(value)
-        newNode.next = self.start.next
-        self.start = newNode
+        if self.start == None:
+            self.start = Node(value)
+        else:
+            newNode = Node(value)
+            newNode.next = self.start
+            self.start = newNode
     
-    
+    def display(self):
+        temp = self.start
+        while(temp!=None):
+            print(temp.data, end="->")
+            temp = temp.next
+        print("Front")
+
+QLL = Queue_LL()
+QLL.enqueue(10)
+QLL.enqueue(20)
+QLL.enqueue(30)
+QLL.display()
