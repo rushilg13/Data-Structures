@@ -3,10 +3,37 @@ class Node:
         self.data = data
         self.left = None
         self.right = None
+
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def enqueue(self, item):
+        self.items.insert(0, item)
+
+    def isEmpty(self):
+        if(len(self.items==0)):
+            return True
+        else:
+            return False
+
+    def dequeue(self):
+        if len(self.items)!=0:
+            return self.items.pop()
+    
+    def peek(self):
+        return self.items[-1].value
+    
+    def size(self):
+        return len(self.items)
     
 class Heap:
     def __init__(self, value):
         self.root = Node(value)
+    
+    def Levelorder(self, start, traversal):
+        pass
+
     
 
 
