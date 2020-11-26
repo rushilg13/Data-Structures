@@ -21,9 +21,20 @@ class Queue_LL:
             print(temp.data, end="->")
             temp = temp.next
         print("Front")
+    
+    def dequeue(self):
+        if self.start == None:
+            print("Queue is Empty")
+        else:
+            temp = self.start
+            while(temp.next.next != None):
+                temp = temp.next
+            temp.next = None        
 
 QLL = Queue_LL()
 QLL.enqueue(10)
 QLL.enqueue(20)
 QLL.enqueue(30)
+QLL.display()
+QLL.dequeue()
 QLL.display()
