@@ -4,3 +4,6 @@ class Node:
         self.left = None
         self.right = None
     
+class Heap:
+    def __init__(self, value):
+        self.root = Node(value)
