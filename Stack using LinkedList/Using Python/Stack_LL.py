@@ -43,6 +43,19 @@ class Stack_LL:
             while(temp.next!=None):
                 temp = temp.next
             print(temp.data)  
+    
+    def swap(self):
+        if self.start == None:
+            print("Stack is Empty!")
+        else:
+            temp = self.start
+            while(temp.next.next.next != None):
+                temp = temp.next
+            # print(temp.data) 
+            temp.next.next.next = temp.next
+            temp.next = temp.next.next
+            temp.next.next.next = None
+
 
 
 SLL = Stack_LL()
@@ -50,7 +63,10 @@ SLL.push(10)
 SLL.push(20)
 SLL.push(30)
 SLL.push(40)     
+SLL.push(50)     
 SLL.display()
 SLL.pop()
 SLL.display()
 SLL.peek()
+SLL.swap()
+SLL.display()
