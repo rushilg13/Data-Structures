@@ -6,5 +6,7 @@ class Node:
 class Stack_LL:
     def __init__(self):
         self.start = None
+
     def insert(self, value):
-        pass
+        if start == None:
+            start.next = Node(value)        
