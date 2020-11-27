@@ -13,6 +13,9 @@ class Queue:
     
     def dequeue(self):
         return self.items.pop()
+    
+    def size(self):
+        return len(self.items)
 
 class BreadthFirstSearch:
     def BFS(self, start):
@@ -20,14 +23,17 @@ class BreadthFirstSearch:
         queue.enqueue(start)
         start.visited = True
 
-        while len(queue)>0:
+        while queue.size()>0:
             node = queue.dequeue()
-            print(node)
-            if len(node.adjacent) > 0:
-                for adj_node in node.adjacent:
-                    if adj_node is False:
-                        queue.enqueue(adj_node)
-                        adj_node.visited = True
+            print(node.name, end = " -> ")
+            # if len(node.adjacent) > 0:
+            
+            for adj_node in node.adjacent:
+                if not adj_node.visited:
+                    queue.enqueue(adj_node)
+                    adj_node.visited = True
+        print("End")
+        return 0
 
 
 Node1 = Node("A")
@@ -45,7 +51,7 @@ Node1.adjacent.append(Node7)
 Node2.adjacent.append(Node3)
 Node2.adjacent.append(Node4)
 Node7.adjacent.append(Node8)
-Node4.adjacent.append(Node6)
+Node4.adjacent.append(Node5)
 
 '''
                           A
@@ -57,3 +63,5 @@ Node4.adjacent.append(Node6)
                       E
 '''
 
+breadthfirstsearch = BreadthFirstSearch()
+bfs = breadthfirstsearch.BFS(Node1)
