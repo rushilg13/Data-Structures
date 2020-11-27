@@ -30,9 +30,30 @@ class BreadthFirstSearch:
                         adj_node.visited = True
 
 
+Node1 = Node("A")
+Node2 = Node("B")
+Node3 = Node("C")
+Node4 = Node("D")
+Node5 = Node("E")
+Node6 = Node("F")
+Node7 = Node("G")
+Node8 = Node("H")
 
+Node1.adjacent.append(Node2)
+Node1.adjacent.append(Node6)
+Node1.adjacent.append(Node7)
+Node2.adjacent.append(Node3)
+Node2.adjacent.append(Node4)
+Node7.adjacent.append(Node8)
+Node4.adjacent.append(Node6)
 
+'''
+                          A
+                      /   |  \   
+                      B   F   G
+                    /  \       \
+                   C    D        H
+                       /
+                      E
+'''
 
-
-
-    
