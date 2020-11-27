@@ -17,3 +17,18 @@ class Stack:
     def size(size):
         return len(self.items)
     
+class DepthFirstSearch:
+    def DFS(self, start):
+        stack = Stack()
+        stack.push(start)
+        print(start)
+        start.visited = True
+
+        while stack.size() > 0:
+            node = stack.pop()
+            if len(node.adjacent) > 0:
+                for adj_node in node.adjacent:
+                    stack.push(adj_node)
+                    adj_node.visited = True
+
+
