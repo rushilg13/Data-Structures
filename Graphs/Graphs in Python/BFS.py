@@ -26,12 +26,11 @@ class BreadthFirstSearch:
         while queue.size()>0:
             node = queue.dequeue()
             print(node.name, end = " -> ")
-            # if len(node.adjacent) > 0:
-            
-            for adj_node in node.adjacent:
-                if not adj_node.visited:
-                    queue.enqueue(adj_node)
-                    adj_node.visited = True
+            if len(node.adjacent) > 0:
+                for adj_node in node.adjacent:
+                    if not adj_node.visited:
+                        queue.enqueue(adj_node)
+                        adj_node.visited = True
         print("End")
         return 0
 
