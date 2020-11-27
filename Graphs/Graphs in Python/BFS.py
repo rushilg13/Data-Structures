@@ -64,3 +64,4 @@ Node4.adjacent.append(Node5)
 
 breadthfirstsearch = BreadthFirstSearch()
 bfs = breadthfirstsearch.BFS(Node1)
+# OUTPUT A -> B -> F -> G -> C -> D -> H -> E -> End
