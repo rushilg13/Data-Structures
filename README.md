@@ -10,3 +10,6 @@ Implemented in C Language And Python.
 8) Doubly LinkedList
 9) Binary Trees
 10) Binary Search Trees
+11) Queue using LinkedList
+12) Stack using LinkedList
+13) Graphs - BFS, DFS
