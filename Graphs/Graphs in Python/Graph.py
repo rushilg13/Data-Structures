@@ -20,7 +20,7 @@ class Graph:
             return [path]
         
         if start not in self.graph_dict:  # For City which are not a starting point. like Toronto in eg
-            return []
+            return None
         
         paths = []
         
@@ -32,7 +32,16 @@ class Graph:
         return paths
 
 
-        
+    def Shortest_Path(self, start, end):
+        paths = self.Get_Paths(start, end)  
+        if paths == None:
+            return None        
+        else:
+            sp = paths[0]
+        for path in paths:
+            if len(path) < len(sp):
+                sp = path
+        return(sp)   
 
 
 
@@ -46,4 +55,6 @@ routes = [
          ]
 
 graph_routes = Graph(routes)
-print("Paths between Mumbai and New York are:\n",graph_routes.Get_Paths("Mumbai", "New York"))
+print("Paths between Mumbai and New York are:\n",graph_routes.Get_Paths("Mumbai", "New York"), "\n\n")
+
+print("Shortest Path between Mumbai and New York is:\n",graph_routes.Shortest_Path("Mumbai", "New York"), "\n\n")
