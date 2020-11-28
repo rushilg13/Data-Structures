@@ -56,8 +56,14 @@ class LinkedList:
             while(temp.next != None):
                 temp.next = temp.next.next
                 temp = temp.next
-
-
+    
+    def reverse(self):
+        if self.start==None:
+            print("List Empty!")
+        else:
+            self.curr = None
+            self.prev = None
+            
 
 
 LL = LinkedList()
