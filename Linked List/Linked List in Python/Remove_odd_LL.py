@@ -25,5 +25,12 @@ class LinkedList:
                 print(temp.value, end = "->")
                 temp = temp.next
             print("End")
+
+LL = LinkedList()
+LL.insert(10)
+LL.insert(20)
+LL.insert(30)
+LL.insert(40)
+LL.display()
             
-            t
+            
