@@ -47,6 +47,16 @@ class LinkedList:
                 temp.next = temp.next.next
                 temp = temp.next
 
+    
+    def remove_even(self):
+        if self.start==None:
+            print("List Empty!")
+        else:
+            temp = self.start.next
+            while(temp.next != None):
+                temp.next = temp.next.next
+                temp = temp.next
+
 
 
 
@@ -64,9 +74,15 @@ LL.insert(100)
 
 LL.display()
 print("Lenth of LinkedList is:", LL.get_len())
+
 LL.remove_odd()
 LL.display()
 print("Lenth of LinkedList is:", LL.get_len())
+
+LL.remove_even()
+LL.display()
+print("Lenth of LinkedList is:", LL.get_len())
+
 
             
             
