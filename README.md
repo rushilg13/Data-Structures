@@ -15,3 +15,4 @@ Implemented in C Language And Python.
 13) Graphs - BFS, DFS
 14) Heap
 15) Dijkstra Algo (Python 2.0)
+16) Hash Table
