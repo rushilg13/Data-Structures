@@ -1,4 +1,3 @@
-# NOT WORKING. PLS FIX ISSUE IF FOUND ANY!
 class Node:
     def __init__(self, name):
         self.name = name
@@ -13,7 +12,7 @@ class Stack:
         self.items.append(item)
     
     def pop(self):
-        return self.items[-1]
+        return self.items.pop()
     
     def size(self):
         return len(self.items)
@@ -21,15 +20,16 @@ class Stack:
 class DepthFirstSearch:
     def DFS(self, start):
         stack = Stack()
-        stack.push(start)
-        print(start.name)
         start.visited = True
-        while stack:
+        stack.push(start)
+        while stack.size() > 0:
             node = stack.pop()
+            print(node.name, end="->")
             for adj_node in node.adjacent:
                 if adj_node.visited==False:
-                    stack.push(adj_node)
                     adj_node.visited = True
+                    stack.push(adj_node)
+        print("End")
 
 
 Node1 = Node("A")
@@ -61,4 +61,4 @@ Node4.adjacent.append(Node5)
 
 depthfirstsearch = DepthFirstSearch()
 dfs = depthfirstsearch.DFS(Node1)
-# OUTPUT 
+# OUTPUT  A->G->H->F->B->D->E->C->End
