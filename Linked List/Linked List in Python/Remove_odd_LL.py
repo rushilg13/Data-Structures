@@ -61,9 +61,26 @@ class LinkedList:
         if self.start==None:
             print("List Empty!")
         else:
-            self.curr = None
+            self.curr = self.start
             self.prev = None
+            self.after = self.start.next
+            while(self.after!=None):
+                self.curr.next = self.prev
+                self.prev = self.curr
+                self.curr = self.after
+                self.after = self.curr.next
+            self.curr.next = self.prev
+            temp = self.curr
+            while(temp != None):
+                print(temp.value, end="->")
+                temp = temp.next
+            print("End")
             
+                        
+
+
+
+
 
 
 LL = LinkedList()
@@ -81,14 +98,15 @@ LL.insert(100)
 LL.display()
 print("Lenth of LinkedList is:", LL.get_len())
 
-LL.remove_odd()
-LL.display()
-print("Lenth of LinkedList is:", LL.get_len())
+# LL.remove_odd()
+# LL.display()
+# print("Lenth of LinkedList is:", LL.get_len())
 
-LL.remove_even()
-LL.display()
-print("Lenth of LinkedList is:", LL.get_len())
+# LL.remove_even()
+# LL.display()
+# print("Lenth of LinkedList is:", LL.get_len())
 
+LL.reverse()
 
             
             
