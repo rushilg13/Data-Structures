@@ -74,15 +74,8 @@ class LinkedList:
             while(temp != None):
                 print(temp.value, end="->")
                 temp = temp.next
-            print("End")
-            
+            print("End")      
                         
-
-
-
-
-
-
 LL = LinkedList()
 LL.insert(10)
 LL.insert(20)
