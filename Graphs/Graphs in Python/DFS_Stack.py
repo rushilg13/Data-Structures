@@ -1,3 +1,4 @@
+# NOT WORKING. PLS FIX ISSUE IF FOUND ANY!
 class Node:
     def __init__(self, name):
         self.name = name
