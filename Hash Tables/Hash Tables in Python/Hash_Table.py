@@ -21,6 +21,10 @@ class HashTable:
                 count+=1
         print("Currently there are", count, "entries in Hash table")
 
+    def delete(self, key):
+        ind = self.get_key(key)
+        self.arr[ind] = None
+
 
 
 hash = HashTable()
@@ -36,5 +40,9 @@ hash.add(95,"Sarah")
 hash.add(916,"Miley")
 
 hash.print_arr()
+
+hash.count()
+
+hash.delete(216)
 
 hash.count()
