@@ -38,6 +38,32 @@ class LinkedList:
             return (count)
 
 
- 
+LL1 = LinkedList()
+LL1.insert(10)
+LL1.insert(20)
+LL1.insert(30)
+LL1.insert(40)
+LL1.insert(50)
+LL1.insert(60)
+LL1.insert(70)
+LL1.insert(80)
+LL1.insert(90)
+LL1.insert(100)
+
+LL1.display()
+
+LL2 = LinkedList()
+LL2.insert(1)
+LL2.insert(2)
+LL2.insert(3)
+LL2.insert(4)
+LL2.insert(5)
+LL2.insert(6)
+LL2.insert(7)
+LL2.insert(8)
+LL2.insert(9)
+LL2.insert(11)
+
+LL2.display()
                         
 
