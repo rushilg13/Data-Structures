@@ -91,13 +91,13 @@ LL.insert(100)
 LL.display()
 print("Lenth of LinkedList is:", LL.get_len())
 
-# LL.remove_odd()
-# LL.display()
-# print("Lenth of LinkedList is:", LL.get_len())
+LL.remove_odd()
+LL.display()
+print("Lenth of LinkedList is:", LL.get_len())
 
-# LL.remove_even()
-# LL.display()
-# print("Lenth of LinkedList is:", LL.get_len())
+LL.remove_even()
+LL.display()
+print("Lenth of LinkedList is:", LL.get_len())
 
 LL.reverse()
 
