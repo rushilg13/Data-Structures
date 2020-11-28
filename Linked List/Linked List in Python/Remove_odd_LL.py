@@ -36,6 +36,17 @@ class LinkedList:
                 count+=1
                 temp = temp.next
             return (count)
+    
+    def remove_odd(self):
+        if self.start==None:
+            print("List Empty!")
+        else:
+            self.start = self.start.next
+            temp = self.start
+            while(temp.next != None):
+                temp.next = temp.next.next
+                temp = temp.next
+
 
 
 
@@ -44,7 +55,18 @@ LL.insert(10)
 LL.insert(20)
 LL.insert(30)
 LL.insert(40)
+LL.insert(50)
+LL.insert(60)
+LL.insert(70)
+LL.insert(80)
+LL.insert(90)
+LL.insert(100)
+
 LL.display()
 print("Lenth of LinkedList is:", LL.get_len())
+LL.remove_odd()
+LL.display()
+print("Lenth of LinkedList is:", LL.get_len())
+
             
             
