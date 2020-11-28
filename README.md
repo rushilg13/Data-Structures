@@ -14,3 +14,4 @@ Implemented in C Language And Python.
 12) Stack using LinkedList
 13) Graphs - BFS, DFS
 14) Heap
+15) Dijkstra Algo (Python 2.0)
