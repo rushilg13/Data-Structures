@@ -35,7 +35,7 @@ class LinkedList:
             while temp != None:
                 count+=1
                 temp = temp.next
-            print(count)
+            return (count)
 
 
 
@@ -45,6 +45,6 @@ LL.insert(20)
 LL.insert(30)
 LL.insert(40)
 LL.display()
-LL.get_len()
+print("Lenth of LinkedList is:", LL.get_len())
             
             
