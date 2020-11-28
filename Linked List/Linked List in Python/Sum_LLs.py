@@ -26,3 +26,18 @@ class LinkedList:
                 temp = temp.next
             print("End")
     
+    def get_len(self):
+        if self.start==None:
+            print("List Empty!")
+        else:
+            count=0
+            temp = self.start
+            while temp != None:
+                count+=1
+                temp = temp.next
+            return (count)
+
+
+ 
+                        
+
