@@ -27,7 +27,11 @@ class HashTable:
         ind = self.get_key(key)
         self.arr[ind] = []
     
-
+    def get_item(self, key):
+        ind = self.get_key(key)
+        for i in self.arr[ind]:
+            if i[0] == key:
+                print(i[1])
 
 
 hash = HashTable()
@@ -49,3 +53,4 @@ hash.count()
 hash.delete(216)
 hash.print_arr()
 hash.count()
+hash.get_item(617)
