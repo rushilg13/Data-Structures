@@ -32,6 +32,9 @@ class HashTable:
         for i in self.arr[ind]:
             if i[0] == key:
                 print(i[1])
+            else:
+                print("Key not in Table")
+                break
 
 
 hash = HashTable()
@@ -53,4 +56,4 @@ hash.count()
 hash.delete(216)
 hash.print_arr()
 hash.count()
-hash.get_item(617)
+hash.get_item(517)
