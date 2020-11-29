@@ -16,3 +16,6 @@ Implemented in C Language And Python.
 14) Heap
 15) Dijkstra Algo (Python 2.0)
 16) Hash Table
+
+Searching Sorting Algo in -
+https://github.com/rushilg13/Algorithms
