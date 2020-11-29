@@ -1,5 +1,5 @@
 # Capable of handling Collisions
-
+# Time Complexity might go upto O(N)
 class HashTable:
     def __init__(self):
         self.MAX = 10
