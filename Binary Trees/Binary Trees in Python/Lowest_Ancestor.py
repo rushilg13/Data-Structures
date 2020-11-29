@@ -4,6 +4,16 @@ class Node:
         self.left = None
         self.right = None
 
+class Stack:
+    def __init__(self):
+        self.items = []
+    
+    def push(self, item):
+        self.items.append(item)
+    
+    def pop(self):
+        self.items.pop(-1)
+
 class binary:
     def __init__(self, value):
         self.root = Node(value)
