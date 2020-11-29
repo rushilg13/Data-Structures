@@ -39,6 +39,13 @@ class binary:
             while temp1 != node2:
                 stack2.push(temp1)
                 temp1 = temp1.left
+            if stack1.peek() == stack2.peek():
+                print(stack1.peek())
+            else:
+                while stack1.peek() == stack2.peek():
+                    stack1.pop()
+                    stack2.pop()
+                print(stack1.peek())
             
 
                       
