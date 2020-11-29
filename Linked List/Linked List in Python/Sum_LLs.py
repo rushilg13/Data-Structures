@@ -36,9 +36,6 @@ class LinkedList:
                 count+=1
                 temp = temp.next
             return (count)
-    
-    def sum_LL(self):
-        pass
 
 
 LL1 = LinkedList()
@@ -68,5 +65,21 @@ LL2.insert(9)
 LL2.insert(11)
 
 LL2.display()
-                        
 
+# SUM OF ELEMENTS IN LINKEDLIST
+
+temp1 = LL1.start
+temp2 = LL2.start
+sum_LL = LinkedList()
+while(temp1 != None or temp2 != None):
+    if(sum_LL.start == None):
+        sum_LL.start = Node(temp1.value + temp2.value)
+    else:
+        temp = sum_LL.start
+        while temp.next != None:
+            temp = temp.next
+        temp.next = Node(temp1.value + temp2.value)
+    temp1 = temp1.next
+    temp2 = temp2.next
+
+sum_LL.display()   
