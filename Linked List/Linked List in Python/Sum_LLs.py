@@ -36,6 +36,9 @@ class LinkedList:
                 count+=1
                 temp = temp.next
             return (count)
+    
+    def sum_LL(self):
+        pass
 
 
 LL1 = LinkedList()
