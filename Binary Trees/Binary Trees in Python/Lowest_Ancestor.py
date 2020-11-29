@@ -9,9 +9,13 @@ class binary:
         self.root = Node(value)
     
     def ancestor(self, node1, node2):
-            
-        pass
+        if self.root == None:
+            return
+        if node1==self.root or node2 == self.root:
+            print(self.root.value)
+        if             
 
 tree = binary(1)
 tree.root.left = Node(2)
 tree.root.right = Node(3)
+tree.ancestor(tree.root,tree.root.left)
