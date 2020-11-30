@@ -8,12 +8,10 @@ class binary:
     def __init__(self, value):
         self.root = Node(value)
 
-
 # INCOMPLETE!!!
 # WILL COMPLETE LATER
 # ISSEUES AND PULL REQUESTS APPRECIATED.
                       
-
 tree = binary(1)
 tree.root.left = Node(2)
 tree.root.right = Node(3)
