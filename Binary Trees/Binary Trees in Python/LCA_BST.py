@@ -8,3 +8,4 @@ class BST:
     def __init__(self, value):
         self.root = Node(value)
 
+
