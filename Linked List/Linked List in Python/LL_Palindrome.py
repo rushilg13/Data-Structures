@@ -9,7 +9,7 @@ class LinkedList:
     
     def insert(self, value):
         if self.start == None:
-            self.start.next = Node(value)
+            self.start = Node(value)
         else:
             temp = self.start
             while(temp.next != None):
@@ -26,3 +26,8 @@ class LinkedList:
                 temp = temp.next
             print("End")
 
+LL = LinkedList()
+LL.insert(10)
+LL.insert(20)
+LL.insert(30)
+LL.display()
