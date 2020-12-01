@@ -25,9 +25,22 @@ class LinkedList:
                 print(temp.value, end="->")
                 temp = temp.next
             print("End")
+    
+    def check_palindrome(self):
+        s1 = s2 = ""
+        if self.start == None:
+            print("LinkedList is empty")
+        else:
+            temp = self.start
+            while(temp != None):
+                s1 = s1 + temp.value
+                temp = temp.next
+            print(s1)
+
 
 LL = LinkedList()
-LL.insert(10)
-LL.insert(20)
-LL.insert(30)
+LL.insert("a")
+LL.insert("b")
+LL.insert("c")
 LL.display()
+LL.check_palindrome()
