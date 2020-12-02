@@ -27,7 +27,7 @@ class LinkedList:
             print("End")
     
     def check_palindrome(self):
-        s1 = s2 = ""
+        s1 = ""
         if self.start == None:
             print("LinkedList is empty")
         else:
@@ -36,6 +36,7 @@ class LinkedList:
                 s1 = s1 + temp.value
                 temp = temp.next
             print(s1)
+            # Now simply check if s1 is palindrome
 
 
 LL = LinkedList()
