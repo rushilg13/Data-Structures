@@ -38,10 +38,30 @@ class LinkedList:
                 count+=1
                 temp = temp.next
             return count
+    
+    def Middle_1(self):
+        count = LL.size()
+        if count == 0:
+            print("No elements in list!")
+        if count%2 == 0:
+            counter = 0
+            temp = self.start
+            while(temp.next != None and counter != (count/2)-1):
+                counter+=1
+                temp = temp.next
+            temp.next = temp.next.next
+    
+    # APPROACH 2, Traverse linked list using two pointers. Move one pointer by one and the other pointers by two. When the fast pointer reaches the end slow pointer will reach the middle of the linked list.
+
 
 LL = LinkedList()
 LL.display()
 LL.insert(10)
 LL.insert(20)
 LL.insert(30)
+LL.insert(40)
 LL.display()
+print(LL.size())
+LL.Middle_2()
+LL.display()
+print(LL.size())
