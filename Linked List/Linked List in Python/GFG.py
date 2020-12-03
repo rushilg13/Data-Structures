@@ -25,6 +25,19 @@ class LinkedList:
                 print(temp.value, end="->")
                 temp = temp.next
             print("End")
+    # https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/
+    # APPROACH 1, Count size, then go halfway
+    def size(self):
+        count = 0
+        if self.start == None:
+            print("LinkedList is Empty!")
+            return 0
+        else:
+            temp = self.start
+            while(temp != None):
+                count+=1
+                temp = temp.next
+            return count
 
 LL = LinkedList()
 LL.display()
