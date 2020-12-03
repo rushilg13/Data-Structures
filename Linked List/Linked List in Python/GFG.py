@@ -319,15 +319,26 @@ class LinkedList:
                 temp = temp.next
             print(set(arr))
     
-    
+    # Approach 2
+    def delete_duplicate_2(self):
+        if self.start == None:
+            print("LinkedList is Empty!")
+        else:
+            temp = self.start
+            while(temp.next != None):
+                if(temp.value == temp.next.value):
+                    print(temp.value)
+                    temp.next = temp.next.next
+                    temp = temp.next
+                print(temp.value)
 
 
 LL = LinkedList()
-LL.insert(10)
-LL.insert(10)
-LL.insert(12)
-LL.insert(12)
-LL.insert(15)
+LL.insert(2)
+LL.insert(2)
+LL.insert(4)
+LL.insert(5)
+LL.insert(6)
 LL.display()
-LL.delete_duplicate_1()
+LL.delete_duplicate_2()
     
