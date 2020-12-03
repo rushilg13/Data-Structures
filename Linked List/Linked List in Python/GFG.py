@@ -70,7 +70,7 @@ class LinkedList:
             while(ahead != None):
                 behind = behind.next
                 ahead = ahead.next.next
-            print("Middle Value is", behind.value)   
+            print("Middle Value is", behind.value)  
 
 LL = LinkedList()
 LL.display()
@@ -82,3 +82,5 @@ LL.insert(50)
 LL.display()
 print(LL.size())
 LL.Middle_1()
+LL.Middle_2()
+
