@@ -296,3 +296,38 @@ class LinkedList:
             while(temp.next != None):
                 temp = temp.next
             temp.next = Node(value)
+
+    def display(self):
+        if self.start == None:
+            print("LinkedList is Empty!")
+        else:
+            temp = self.start
+            while(temp != None):
+                print(temp.value, end="->")
+                temp = temp.next
+            print("End")
+
+    # Approach 1, Time - O(N), Space - O(N)
+    def delete_duplicate_1(self):
+        arr = []
+        if self.start == None:
+            print("LinkedList is Empty!")
+        else:
+            temp = self.start
+            while(temp != None):
+                arr.append(temp.value)
+                temp = temp.next
+            print(set(arr))
+    
+    
+
+
+LL = LinkedList()
+LL.insert(10)
+LL.insert(10)
+LL.insert(12)
+LL.insert(12)
+LL.insert(15)
+LL.display()
+LL.delete_duplicate_1()
+    
