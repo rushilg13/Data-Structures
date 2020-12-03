@@ -46,18 +46,18 @@ class LinkedList:
         if count%2 == 0:
             counter = 0
             temp = self.start
-            while(temp.next != None and counter != (count/2)-1):
+            while(temp != None and counter != (count/2)-1):
                 counter+=1
                 temp = temp.next
-            temp.next = temp.next.next
+            print("Middle Value is",temp.value)
 
         if count%2 != 0:
             counter = 0
             temp = self.start
-            while(temp.next != None and counter != int(count/2)-1):
+            while(temp != None and counter != int(count/2)):
                 counter+=1
                 temp = temp.next
-            temp.next = temp.next.next
+            print("Middle Value is", temp.value)
     
     # APPROACH 2, Traverse linked list using two pointers. Move one pointer by one and the other pointers by two. When the fast pointer reaches the end slow pointer will reach the middle of the linked list.
 
@@ -70,7 +70,7 @@ class LinkedList:
             while(ahead != None):
                 behind = behind.next
                 ahead = ahead.next.next
-            print(behind.value)   
+            print("Middle Value is", behind.value)   
 
 LL = LinkedList()
 LL.display()
@@ -78,8 +78,7 @@ LL.insert(10)
 LL.insert(20)
 LL.insert(30)
 LL.insert(40)
+LL.insert(50)
 LL.display()
 print(LL.size())
-LL.Middle_2()
-LL.display()
-print(LL.size())
+LL.Middle_1()
