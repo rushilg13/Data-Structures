@@ -50,9 +50,27 @@ class LinkedList:
                 counter+=1
                 temp = temp.next
             temp.next = temp.next.next
+
+        if count%2 != 0:
+            counter = 0
+            temp = self.start
+            while(temp.next != None and counter != int(count/2)-1):
+                counter+=1
+                temp = temp.next
+            temp.next = temp.next.next
     
     # APPROACH 2, Traverse linked list using two pointers. Move one pointer by one and the other pointers by two. When the fast pointer reaches the end slow pointer will reach the middle of the linked list.
 
+    def Middle_2(self):
+        if self.start == None:
+            print("LinkedList is Empty!")
+        else:
+            behind = self.start
+            ahead = self.start
+            while(ahead != None):
+                behind = behind.next
+                ahead = ahead.next.next
+            print(behind.value)   
 
 LL = LinkedList()
 LL.display()
