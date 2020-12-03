@@ -12,6 +12,16 @@ class LinkedList:
             self.start = Node(value)
         else:
             temp = self.start
-            while(temp != None):
+            while(temp.next != None):
                 temp = temp.next
             temp.next = Node(value)
+    
+    def display(self):
+        if self.start == None:
+            print("LinkedList is Empty!")
+        else:
+            temp = self.start
+            while(temp != None):
+                print(temp.value, end="->")
+                temp = temp.next
+            print("End")
