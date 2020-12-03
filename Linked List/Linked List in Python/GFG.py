@@ -1,3 +1,5 @@
+# https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -25,7 +27,7 @@ class LinkedList:
                 print(temp.value, end="->")
                 temp = temp.next
             print("End")
-    # https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/
+    
     # APPROACH 1, Count size, then go halfway
     def size(self):
         count = 0
