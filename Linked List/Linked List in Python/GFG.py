@@ -210,6 +210,8 @@ class Stack:
         for i in self.items:
             sum += i
         return sum
+    def disp(self):
+        return list(self.items)
 
 class LinkedList:
     def __init__(self):
@@ -233,3 +235,31 @@ class LinkedList:
                 print(temp.value, end="->")
                 temp = temp.next
             print("End")
+    
+    def DeleteSumZeroNodes(self):
+        if self.start == None:
+            print("LinkedList Empty!")
+            return
+        else:
+            temp = self.start
+            stack = Stack()
+            while(temp != None):
+                stack.push(temp.value)
+                temp = temp.next
+                if stack.sum_all() == 0:
+                    stack = Stack()
+            print(stack.disp())
+
+LL = LinkedList()
+LL.insert(6)
+LL.insert(-6)
+LL.insert(8)
+LL.insert(4)
+LL.insert(-12)
+LL.insert(9)
+LL.insert(8)
+LL.insert(-8)
+LL.display()
+LL.DeleteSumZeroNodes()
+                    
+
