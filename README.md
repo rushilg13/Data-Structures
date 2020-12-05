@@ -1,5 +1,5 @@
 # Data-Structures
-Implemented in C Language And Python.
+Implemented in C Language And Python. // Adding GFG Problems
 1) Stack
 2) Queue
 3) Parenthesis Balancing
